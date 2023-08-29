@@ -1,0 +1,29 @@
+
+spring:
+  application:
+    name: memorandum
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:./db
+    username: root
+    password: xiaobai
+    schema: classpath:db/db.sql
+    hikari:
+      minimum-idle: 10
+      idle-timeout: 30000
+      maximum-pool-size: 50
+      max-lifetime: 120000
+      connection-timeout: 30000
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+      settings:
+        trace: true
+        web-allow-others: true
+
+
+
+server:
+  port: 8989
+
